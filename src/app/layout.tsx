@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'fr_FR',
-    url: 'https://jbkoudjo.dev',
+    url: '#',
     title: 'Djiento Abanga - Développeur Full-Stack',
     description: 'Développeur full-stack basé au Bénin, spécialisé en React, Node.js et technologies modernes.',
     siteName: 'Portfolio Djiento Abanga',
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Jean-Baptiste Koudjo - Développeur Full-Stack',
+        alt: 'Djiento Abanga - Développeur Full-Stack',
       },
     ],
   },
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Djiento Abanga - Développeur Full-Stack',
     description: 'Développeur full-stack basé au Bénin, spécialisé en React, Node.js et technologies modernes.',
-    creator: '@jbkoudjo',
+    creator: '@djiento',
     images: ['/og-image.jpg'],
   },
   robots: {

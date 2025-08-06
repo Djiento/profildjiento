@@ -6,6 +6,7 @@ import Image from 'next/image';
 import '@/app/globals.css';
 import Button from '@/components/ui/Button';
 import { personalInfo } from '@/data/portfolio';
+import ImageProfil from '@/Images/Profil_Picture.png'
 
 export default function Hero() {
   const scrollToSection = (href: string) => {
@@ -42,11 +43,11 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6"
+              className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-600 mb-6"
             >
               Salut, je suis{' '}
-              <span className="text-primary-600 bg-gradient-to-r from-primary-600 to-primary-800 bg-clip-text text-transparent">
-                {personalInfo.name.split(' ')[0]}
+              <span className="text-primary-600 bg-gradient-to-r text-blue-600 from-primary-600 to-primary-800 bg-clip-text ">
+                {personalInfo.name.split('+1')[0]}
               </span>
             </motion.h1>
 
@@ -65,9 +66,14 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.5 }}
-              className="text-lg text-gray-500 mb-6 font-mono"
-            >
-              {personalInfo.subtitle}
+              
+            >          
+            <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">React.js</span>
+            <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Node.js</span>
+            <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Django</span>
+            <span className="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm">TypeScript</span>
+            <span className="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm">MySQL</span>
+          
             </motion.p>
 
             {/* Location */}
@@ -75,7 +81,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}
-              className="flex items-center justify-center lg:justify-start mb-8"
+              className="flex items-center justify-center lg:justify-start mb-8 mt-8"
             >
               <MapPin size={20} className="text-primary-600 mr-2" />
               <span className="text-gray-600">{personalInfo.location}</span>
@@ -99,7 +105,8 @@ export default function Hero() {
               className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
             >
               <Button
-                size="lg"
+                variant="Green"
+                size="md"
                 onClick={() => scrollToSection('#contact')}
                 className="group"
               >
@@ -108,17 +115,19 @@ export default function Hero() {
               </Button>
               
               <Button
-                variant="outline"
-                size="lg"
+                variant="secondary"
+                size="md"
+                className="groupe"
                 onClick={() => window.open('/cv.pdf', '_blank')}
               >
                 <Download size={20} className="mr-2" />
                 Télécharger CV
               </Button>
 
+
               <Button
-                variant="ghost"
-                size="lg"
+                variant="secondary"
+                size="md"
                 onClick={() => window.open(personalInfo.calendlyUrl, '_blank')}
               >
                 <Calendar size={20} className="mr-2" />
@@ -155,9 +164,14 @@ export default function Hero() {
                 className="relative w-full h-full rounded-full overflow-hidden border-4 border-white shadow-2xl bg-gray-200"
               >
                 <div className="w-full h-full bg-gradient-to-br from-primary-100 to-primary-200 flex items-center justify-center">
-                  <span className="text-6xl font-bold text-primary-600">
-                    {personalInfo.name.charAt(0)}
-                  </span>
+                <Image
+                  src = {ImageProfil}
+                  width ={290}
+                  height={50}
+                  alt="djiento"
+                
+                />
+
                 </div>
               </motion.div>
 

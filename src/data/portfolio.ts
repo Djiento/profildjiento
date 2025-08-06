@@ -6,10 +6,11 @@ export const personalInfo = {
   subtitle: 'React • Node.js • Python • MySql',
   location: 'Cotonou, Bénin',
   email: 'abangadj@gmail.com',
-  phone: '+229 01 98 43 9292',
+  phone: '+229 0198 439 292',
   availability: 'Disponible pour nouveaux projets',
   bio: `Développeur full-stack passionné basé au Bénin, je crée des solutions web et mobile modernes pour des clients internationaux. Avec plus de 5 ans d'expérience, je maîtrise l'écosystème JavaScript/TypeScript et les technologies cloud modernes.`,
   avatar: '/images/avatar.jpg',
+  picturProfil:'/images/Profil_picture.png',
   calendlyUrl: 'https://calendly.com/djientoabanga',
 };
 

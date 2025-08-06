@@ -104,7 +104,7 @@ export default function Header() {
                     'px-3 py-2 rounded-md text-sm font-medium transition-colors relative',
                     activeSection === item.href.substring(1)
                       ? 'text-primary-600'
-                      : 'text-gray-700 hover:text-primary-600'
+                      : 'text-gray-700 hover:text-blue-700 transition-colors font-bold'
                   )}
                 >
                   {item.name}
@@ -206,4 +206,3 @@ export default function Header() {
     </motion.header>
   );
 }
-
