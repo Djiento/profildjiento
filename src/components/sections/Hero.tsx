@@ -6,7 +6,6 @@ import Image from 'next/image';
 import '@/app/globals.css';
 import Button from '@/components/ui/Button';
 import { personalInfo } from '@/data/portfolio';
-import ImageProfil from '@/Images/Profil_Picture.png'
 
 export default function Hero() {
   const scrollToSection = (href: string) => {
@@ -165,7 +164,7 @@ export default function Hero() {
               >
                 <div className="w-full h-full bg-gradient-to-br from-primary-100 to-primary-200 flex items-center justify-center">
                 <Image
-                  src = {ImageProfil}
+                  src = "/images/Profil_Picture.png"
                   width ={290}
                   height={50}
                   alt="djiento"
