@@ -10,7 +10,6 @@ import Services from "@/components/sections/Services";
 import Testimonials from "@/components/sections/Testimonials";
 import Contact from "@/components/sections/Contact";
 import PageTransition from "@/components/ui/PageTransition";
-import Reservation from "@/components/reservation";
 
 function LoadingFallback() {
   return (
