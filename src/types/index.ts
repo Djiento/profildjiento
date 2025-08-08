@@ -49,7 +49,7 @@ export interface Testimonial {
   content: string;
   avatar: string;
   rating: number;
-  platform: 'linkedin' | 'upwork' | 'fiverr' | 'direct';
+  platform: 'linkedin' | 'upwork' | 'fiverr' | 'WhatsApp';
 }
 
 export interface Service {

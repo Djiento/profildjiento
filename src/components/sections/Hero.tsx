@@ -68,10 +68,9 @@ export default function Hero() {
               
             >          
             <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">React.js</span>
-            <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Node.js</span>
+            <span className="bg-green-100 text-green-800 px-3 py-1 m-1 rounded-full text-sm">Node.js</span>
             <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Django</span>
-            <span className="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm">TypeScript</span>
-            <span className="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm">MySQL</span>
+            <span className="bg-red-100 text-red-800 px-3 py-1 rounded-full m-1 text-sm">MySQL</span>
           
             </motion.p>
 
@@ -117,7 +116,7 @@ export default function Hero() {
                 variant="secondary"
                 size="md"
                 className="groupe"
-                onClick={() => window.open('/cv.pdf', '_blank')}
+                onClick={() => window.open('/cv/cv.pdf', '_blank')}
               >
                 <Download size={20} className="mr-2" />
                 Télécharger CV

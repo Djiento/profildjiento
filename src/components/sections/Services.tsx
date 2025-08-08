@@ -34,7 +34,7 @@ export default function Services() {
   };
 
   return (
-    <section id="services" className="py-20 bg-gray-50">
+    <section id="services" className="py-20 bg-[#F7FAFF]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -108,7 +108,7 @@ export default function Services() {
                     </div>
 
                     <Button
-                      variant="outline"
+                      variant="Green"
                       className="w-full group-hover:bg-primary-600 group-hover:text-white group-hover:border-primary-600 transition-all"
                       onClick={scrollToContact}
                     >
@@ -145,7 +145,7 @@ export default function Services() {
               {
                 step: '02',
                 title: 'Planification',
-                description: 'Conception de l\'architecture et planning détaillé',
+                description: 'Création du cahier des charges et planification détaillée.',
                 icon: '📋',
               },
               {
@@ -157,7 +157,7 @@ export default function Services() {
               {
                 step: '04',
                 title: 'Livraison',
-                description: 'Déploiement, formation et support continu',
+                description: 'Tests, déploiement et formation à l\'utilisation',
                 icon: '🚀',
               },
             ].map((process, index) => (
@@ -178,7 +178,7 @@ export default function Services() {
                 <h4 className="text-lg font-semibold text-gray-900 mb-2">
                   {process.title}
                 </h4>
-                <p className="text-gray-600 text-sm">
+                <p className="text-gray-600 text-l">
                   {process.description}
                 </p>
               </motion.div>
@@ -214,7 +214,7 @@ export default function Services() {
               },
               {
                 question: 'Quelles technologies utilisez-vous ?',
-                answer: 'Je me spécialise dans l\'écosystème JavaScript/TypeScript : React, Node.js, Next.js, et les technologies cloud modernes.',
+                answer: 'Je me spécialise dans l\'écosystème JavaScript/TypeScript : React, Python : Django, Node.js, Next.js, et les technologies cloud modernes.',
               },
             ].map((faq, index) => (
               <motion.div
@@ -245,7 +245,7 @@ export default function Services() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center bg-gradient-to-r from-primary-600 to-primary-800 rounded-2xl p-8 text-white"
+          className="text-center bg-gradient-to-r from-primary-600 to-primary-800 rounded-2xl p-8 text-gray-700"
         >
           <h3 className="text-2xl font-bold mb-4">
             Prêt à démarrer votre projet ?
@@ -256,17 +256,17 @@ export default function Services() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
-              variant="secondary"
+              variant="Green"
               size="lg"
               onClick={scrollToContact}
             >
               Demander un devis gratuit
             </Button>
             <Button
-              variant="ghost"
+              variant="primary"
               size="lg"
-              onClick={() => window.open('https://calendly.com/jbkoudjo', '_blank')}
-              className="text-white border-white hover:bg-white hover:text-primary-600"
+              onClick={() => window.open('https://calendly.com/abangadj/30min')}
+              className="text-white hover:text-primary-600"
             >
               Planifier un appel
             </Button>

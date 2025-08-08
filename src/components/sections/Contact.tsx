@@ -133,7 +133,7 @@ export default function Contact() {
                       className="flex items-center group cursor-pointer"
                       onClick={() => window.open(`mailto:${personalInfo.email}`, '_blank')}
                     >
-                      <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mr-4 group-hover:bg-primary-600 group-hover:text-white transition-colors">
+                      <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mr-4 group-hover:bg-primary-600 group-hover:text-green-700 transition-colors">
                         <Mail size={20} />
                       </div>
                       <div>
@@ -150,7 +150,7 @@ export default function Contact() {
                       className="flex items-center group cursor-pointer"
                       onClick={() => window.open(`tel:${personalInfo.phone}`, '_blank')}
                     >
-                      <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mr-4 group-hover:bg-primary-600 group-hover:text-white transition-colors">
+                      <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mr-4 group-hover:bg-primary-600 group-hover:text-green-700 transition-colors">
                         <Phone size={20} />
                       </div>
                       <div>
@@ -163,7 +163,7 @@ export default function Contact() {
 
                     {/* Location */}
                     <motion.div whileHover={{ x: 5 }} className="flex items-center group">
-                      <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mr-4 group-hover:bg-primary-600 group-hover:text-white transition-colors">
+                      <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mr-4 group-hover:bg-primary-600 group-hover:text-green-700 transition-colors">
                         <MapPin size={20} />
                       </div>
                       <div>
@@ -180,7 +180,7 @@ export default function Contact() {
                       className="flex items-center group cursor-pointer"
                       onClick={() => window.open(personalInfo.calendlyUrl, '_blank')}
                     >
-                      <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mr-4 group-hover:bg-primary-600 group-hover:text-white transition-colors">
+                      <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mr-4 group-hover:bg-primary-600 group-hover:text-green-700 transition-colors">
                         <Calendar size={20} />
                       </div>
                       <div>
@@ -208,7 +208,7 @@ export default function Contact() {
                             rel="noopener noreferrer"
                             whileHover={{ scale: 1.1 }}
                             whileTap={{ scale: 0.95 }}
-                            className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center text-gray-600 hover:bg-primary-600 hover:text-white transition-colors"
+                            className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center text-gray-600 hover:bg-primary-600 hover:text-green-700 transition-colors"
                             aria-label={link.platform}
                           >
                             <Icon size={18} />
@@ -233,7 +233,7 @@ export default function Contact() {
             <motion.div variants={itemVariants}>
               <Card>
                 <CardHeader>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                  <h3 className="text-xl text-center font-semibold text-gray-900 mb-4">
                     Envoyez-moi un message
                   </h3>
                 </CardHeader>

@@ -1,23 +1,23 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import { Star, Quote, Linkedin, ExternalLink } from 'lucide-react';
-import Image from 'next/image';
-import { testimonials } from '@/data/portfolio';
-import Card, { CardContent } from '@/components/ui/Card';
+import { motion } from "framer-motion";
+import { Star, Quote, Linkedin, ExternalLink } from "lucide-react";
+import Image from "next/image";
+import { testimonials } from "@/data/portfolio";
+import Card, { CardContent } from "@/components/ui/Card";
 
 const platformIcons = {
   linkedin: Linkedin,
   upwork: ExternalLink,
   fiverr: ExternalLink,
-  direct: Quote,
+  WhatsApp: Quote,
 };
 
 const platformColors = {
-  linkedin: 'text-blue-600',
-  upwork: 'text-green-600',
-  fiverr: 'text-green-500',
-  direct: 'text-gray-600',
+  linkedin: "text-blue-600",
+  upwork: "text-green-600",
+  fiverr: "text-green-500",
+  WhatsApp: "text-gray-600",
 };
 
 export default function Testimonials() {
@@ -46,7 +46,7 @@ export default function Testimonials() {
         key={i}
         size={16}
         className={`${
-          i < rating ? 'text-yellow-400 fill-current' : 'text-gray-300'
+          i < rating ? "text-yellow-400 fill-current" : "text-gray-300"
         }`}
       />
     ));
@@ -67,7 +67,8 @@ export default function Testimonials() {
             Témoignages Clients
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Découvrez ce que mes clients disent de notre collaboration et des résultats obtenus.
+            Découvrez ce que mes clients disent de notre collaboration et des
+            résultats obtenus.
           </p>
         </motion.div>
 
@@ -80,10 +81,10 @@ export default function Testimonials() {
           className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
         >
           {[
-            { label: 'Projets livrés', value: '50+', icon: '🚀' },
-            { label: 'Clients satisfaits', value: '40+', icon: '😊' },
-            { label: 'Note moyenne', value: '4.9/5', icon: '⭐' },
-            { label: 'Années d\'expérience', value: '5+', icon: '💼' },
+            { label: "Projets livrés", value: "580+", icon: "🚀" },
+            { label: "Clients satisfaits", value: "562+", icon: "😊" },
+            { label: "Note moyenne", value: "4.9/5", icon: "⭐" },
+            { label: "Années d'expérience", value: "12+", icon: "💼" },
           ].map((stat, index) => (
             <motion.div
               key={stat.label}
@@ -112,15 +113,20 @@ export default function Testimonials() {
         >
           {testimonials.map((testimonial) => {
             const PlatformIcon = platformIcons[testimonial.platform];
-            
+
             return (
               <motion.div key={testimonial.id} variants={itemVariants}>
                 <Card className="h-full group hover:shadow-xl transition-all duration-300">
                   <CardContent>
                     {/* Quote Icon */}
                     <div className="flex justify-between items-start mb-4">
-                      <Quote size={32} className="text-primary-200 flex-shrink-0" />
-                      <div className={`${platformColors[testimonial.platform]}`}>
+                      <Quote
+                        size={32}
+                        className="text-primary-200 flex-shrink-0"
+                      />
+                      <div
+                        className={`${platformColors[testimonial.platform]}`}
+                      >
                         <PlatformIcon size={20} />
                       </div>
                     </div>
@@ -140,11 +146,6 @@ export default function Testimonials() {
 
                     {/* Author Info */}
                     <div className="flex items-center">
-                      <div className="w-12 h-12 bg-gradient-to-br from-primary-100 to-primary-200 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
-                        <span className="text-primary-600 font-semibold">
-                          {testimonial.name.charAt(0)}
-                        </span>
-                      </div>
                       <div>
                         <div className="font-semibold text-gray-900">
                           {testimonial.name}
@@ -175,13 +176,17 @@ export default function Testimonials() {
           <h3 className="text-xl font-semibold text-gray-900 mb-8">
             Retrouvez-moi sur ces plateformes
           </h3>
-          
+
           <div className="flex flex-wrap justify-center items-center gap-8">
             {[
-              { name: 'LinkedIn', icon: '💼', url: 'https://linkedin.com/in/jbkoudjo' },
-              { name: 'Upwork', icon: '🟢', url: 'https://upwork.com' },
-              { name: 'Fiverr', icon: '🎯', url: 'https://fiverr.com' },
-              { name: 'Malt', icon: '🍺', url: 'https://malt.fr' },
+              {
+                name: "LinkedIn",
+                icon: "💼",
+                url: "https://linkedin.com/in/abangadj",
+              },
+              { name: "Upwork", icon: "🍀", url: "https://upwork.com" },
+              { name: "Fiverr", icon: "🎯", url: "https://fiverr.com" },
+              { name: "Malt", icon: "🍺", url: "https://malt.fr" },
             ].map((platform) => (
               <motion.a
                 key={platform.name}
@@ -207,25 +212,25 @@ export default function Testimonials() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center bg-gradient-to-r from-gray-50 to-gray-100 rounded-2xl p-8"
+          className="text-center bg-[#F7FAFF] from-gray-50 to-gray-100 rounded-2xl p-8"
         >
           <h3 className="text-2xl font-bold text-gray-900 mb-4">
             Rejoignez mes clients satisfaits
           </h3>
           <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-            Faites confiance à mon expertise pour donner vie à vos projets digitaux. 
-            Ensemble, créons quelque chose d'exceptionnel.
+            Faites confiance à mon expertise pour donner vie à vos projets
+            digitaux. Ensemble, créons quelque chose d'exceptionnel.
           </p>
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => {
-              const element = document.querySelector('#contact');
+              const element = document.querySelector("#contact");
               if (element) {
-                element.scrollIntoView({ behavior: 'smooth' });
+                element.scrollIntoView({ behavior: "smooth" });
               }
             }}
-            className="px-8 py-4 bg-primary-600 text-white rounded-lg font-semibold hover:bg-primary-700 transition-colors shadow-lg hover:shadow-xl"
+            className="px-8 py-4 bg-primary-600 bg-green-600 text-white rounded-lg font-semibold hover:bg-primary-700 transition-colors shadow-lg hover:shadow-xl"
           >
             Commencer notre collaboration
           </motion.button>
@@ -234,4 +239,3 @@ export default function Testimonials() {
     </section>
   );
 }
-

@@ -1,30 +1,32 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { ExternalLink, Github, Filter } from 'lucide-react';
-import Image from 'next/image';
-import { projects } from '@/data/portfolio';
-import Card, { CardContent } from '@/components/ui/Card';
-import Button from '@/components/ui/Button';
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { ExternalLink, Github, Filter } from "lucide-react";
+import Image from "next/image";
+import { projects } from "@/data/portfolio";
+import Card, { CardContent } from "@/components/ui/Card";
+import Button from "@/components/ui/Button";
 
 const categories = [
-  { id: 'all', name: 'Tous les projets', icon: '🚀' },
-  { id: 'web', name: 'Web', icon: '🌐' },
-  { id: 'mobile', name: 'Mobile', icon: '📱' },
-  { id: 'fullstack', name: 'Full-Stack', icon: '⚡' },
-  { id: 'api', name: 'API', icon: '🔌' },
+  { id: "all", name: "Tous les projets", icon: "🚀" },
+  { id: "web", name: "Web", icon: "🌐" },
+  { id: "mobile", name: "Mobile", icon: "📱" },
+  { id: "fullstack", name: "Full-Stack", icon: "⚡" },
+  { id: "api", name: "API", icon: "🔌" },
 ];
 
 export default function Projects() {
-  const [activeCategory, setActiveCategory] = useState('all');
+  const [activeCategory, setActiveCategory] = useState("all");
   const [showAll, setShowAll] = useState(false);
 
-  const filteredProjects = projects.filter(project => 
-    activeCategory === 'all' || project.category === activeCategory
+  const filteredProjects = projects.filter(
+    (project) => activeCategory === "all" || project.category === activeCategory
   );
 
-  const displayedProjects = showAll ? filteredProjects : filteredProjects.slice(0, 6);
+  const displayedProjects = showAll
+    ? filteredProjects
+    : filteredProjects.slice(0, 6);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -57,11 +59,11 @@ export default function Projects() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-            Mes Projets
+            Mes <span className="text-blue-700">Projets</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Découvrez une sélection de mes réalisations récentes, allant des applications web 
-            aux solutions mobiles et APIs.
+            Découvrez une sélection de mes réalisations récentes, allant des
+            applications web aux solutions mobiles et APIs.
           </p>
         </motion.div>
 
@@ -81,8 +83,8 @@ export default function Projects() {
               onClick={() => setActiveCategory(category.id)}
               className={`px-6 py-3 rounded-full font-medium transition-all duration-300 flex items-center ${
                 activeCategory === category.id
-                  ? 'bg-primary-600 text-white shadow-lg'
-                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                  ? "bg-primary-600 text-blue-900 shadow-lg"
+                  : "bg-[#F7FAFF] text-gray-700 hover:bg-gray-200"
               }`}
             >
               <span className="mr-2">{category.icon}</span>
@@ -92,7 +94,7 @@ export default function Projects() {
                   layoutId="activeCategory"
                   className="absolute inset-0 bg-primary-600 rounded-full -z-10"
                   initial={false}
-                  transition={{ type: 'spring', stiffness: 380, damping: 30 }}
+                  transition={{ type: "spring", stiffness: 380, damping: 30 }}
                 />
               )}
             </motion.button>
@@ -111,16 +113,22 @@ export default function Projects() {
           >
             {displayedProjects.map((project) => (
               <motion.div key={project.id} variants={itemVariants}>
-                <Card className="group overflow-hidden">
+                <Card className="group overflow-hidden bg-[#F7FAFF]">
                   {/* Project Image */}
-                  <div className="relative h-48 bg-gradient-to-br from-primary-100 to-primary-200 overflow-hidden">
+                  <div className="relative h-48 bg-gradient-to-br from-primary-100 to-primary-200 overflow-hidden ">
                     <div className="absolute inset-0 bg-primary-600/10 group-hover:bg-primary-600/20 transition-colors duration-300" />
                     <div className="absolute inset-0 flex items-center justify-center">
-                      <span className="text-4xl font-bold text-primary-600">
-                        {project.title.charAt(0)}
-                      </span>
+                      <div className="text-4xl font-bold text-primary-600">
+                        <Image
+                          src= {project.image}
+                          //width={290}
+                          //height={50}
+                          alt={project.category}
+                          fill= {true}
+                        />
+                      </div>
                     </div>
-                    
+
                     {/* Overlay with links */}
                     <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-x-4">
                       {project.demoUrl && (
@@ -130,7 +138,7 @@ export default function Projects() {
                           rel="noopener noreferrer"
                           whileHover={{ scale: 1.1 }}
                           whileTap={{ scale: 0.9 }}
-                          className="p-3 bg-white rounded-full text-gray-900 hover:bg-primary-600 hover:text-white transition-colors"
+                          className="p-3 bg-white rounded-full text-gray-900 hover:bg-primary-600 hover:text-gray-600 transition-colors"
                           aria-label="Voir la démo"
                         >
                           <ExternalLink size={20} />
@@ -143,7 +151,7 @@ export default function Projects() {
                           rel="noopener noreferrer"
                           whileHover={{ scale: 1.1 }}
                           whileTap={{ scale: 0.9 }}
-                          className="p-3 bg-white rounded-full text-gray-900 hover:bg-primary-600 hover:text-white transition-colors"
+                          className="p-3 bg-white rounded-full text-gray-900 hover:bg-primary-600 hover:text-gray-600 transition-colors"
                           aria-label="Voir le code"
                         >
                           <Github size={20} />
@@ -199,9 +207,13 @@ export default function Projects() {
                     {/* Category badge */}
                     <div className="flex items-center justify-between">
                       <span className="px-3 py-1 bg-primary-100 text-primary-700 rounded-full text-sm font-medium capitalize">
-                        {categories.find(cat => cat.id === project.category)?.icon} {project.category}
+                        {
+                          categories.find((cat) => cat.id === project.category)
+                            ?.icon
+                        }{" "}
+                        {project.category}
                       </span>
-                      
+
                       {/* Links */}
                       <div className="flex space-x-2">
                         {project.demoUrl && (
@@ -250,7 +262,9 @@ export default function Projects() {
               onClick={() => setShowAll(!showAll)}
             >
               <Filter size={20} className="mr-2" />
-              {showAll ? 'Voir moins' : `Voir tous les projets (${filteredProjects.length})`}
+              {showAll
+                ? "Voir moins"
+                : `Voir tous les projets (${filteredProjects.length})`}
             </Button>
           </motion.div>
         )}
@@ -266,16 +280,18 @@ export default function Projects() {
           <h3 className="text-2xl font-bold text-gray-900 mb-4">
             Vous avez un projet en tête ?
           </h3>
-          <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-            Je suis toujours intéressé par de nouveaux défis et collaborations. 
+          <p className="text-gray-700 mb-6 max-w-2xl mx-auto">
+            Je suis toujours intéressé par de nouveaux défis et collaborations.
             Discutons de votre projet et voyons comment je peux vous aider.
           </p>
           <Button
+            className="text-xl"
+            variant="Green"
             size="lg"
             onClick={() => {
-              const element = document.querySelector('#contact');
+              const element = document.querySelector("#contact");
               if (element) {
-                element.scrollIntoView({ behavior: 'smooth' });
+                element.scrollIntoView({ behavior: "smooth" });
               }
             }}
           >
@@ -286,4 +302,3 @@ export default function Projects() {
     </section>
   );
 }
-

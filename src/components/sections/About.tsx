@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Calendar, MapPin, GraduationCap, Briefcase } from 'lucide-react';
+import { Calendar, Wrench, MapPin, GraduationCap, Briefcase, Database } from 'lucide-react';
 import { skills, experiences, education } from '@/data/portfolio';
 import Card, { CardContent } from '@/components/ui/Card';
 
@@ -10,7 +10,7 @@ const skillCategories = {
   backend: 'Backend',
   database: 'Base de données',
   tools: 'Outils & DevOps',
-  soft: 'Soft Skills',
+  soft: 'CMS',
 };
 
 const skillLevels = {
@@ -41,7 +41,7 @@ export default function About() {
   };
 
   return (
-    <section id="about" className="py-20 bg-gray-50">
+    <section id="about" className="py-20 bg-[#F7FAFF]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -55,7 +55,9 @@ export default function About() {
             À propos de moi
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Découvrez mon parcours, mes compétences et mon expérience dans le développement web et mobile.
+          Développeur full-stack avec +12 ans d'expérience dans la création d'applications Mobil et web. 
+          Passionné par la technologie depuis mon plus jeune âge, 
+          J’ai créé une agence une agence Web nommée « Web Divine » au No RCCM RB/COT/22 A 81850, je transforme des idées complexes en solutions digitales élégantes et performantes.
           </p>
         </motion.div>
 
@@ -86,8 +88,8 @@ export default function About() {
                         <span className="mr-2">
                           {category === 'frontend' && '🎨'}
                           {category === 'backend' && '⚙️'}
-                          {category === 'database' && '🗄️'}
-                          {category === 'tools' && '🛠️'}
+                          {category === 'database' && <Database/>}
+                          {category === 'tools' && <Wrench />}
                           {category === 'soft' && '💡'}
                         </span>
                         {title}
@@ -257,7 +259,7 @@ export default function About() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Languages */}
             <Card>
-              <CardContent>
+              <CardContent className='bg-gray-200'>
                 <h4 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
                   <span className="mr-2">🌍</span>
                   Langues
@@ -272,7 +274,7 @@ export default function About() {
                     <span className="text-sm text-gray-500">Courant</span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-gray-700">Fon</span>
+                    <span className="text-gray-700">Sango</span>
                     <span className="text-sm text-gray-500">Natif</span>
                   </div>
                 </div>
