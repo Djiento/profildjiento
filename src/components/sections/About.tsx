@@ -57,7 +57,7 @@ export default function About() {
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
           Développeur full-stack avec +12 ans d'expérience dans la création d'applications Mobil et web. 
           Passionné par la technologie depuis mon plus jeune âge, 
-          J’ai créé une agence une agence Web nommée « Web Divine » au No RCCM RB/COT/22 A 81850, je transforme des idées complexes en solutions digitales élégantes et performantes.
+          J’ai créé une agence Web nommée « Web Divine » au RCCM RB/COT/22 A 81850, je transforme des idées complexes en solutions digitales élégantes et performantes.
           </p>
         </motion.div>
 

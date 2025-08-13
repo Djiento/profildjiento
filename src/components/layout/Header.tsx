@@ -15,9 +15,9 @@ const navigation = [
 ];
 
 const socialLinks = [
-  { icon: Github, href: 'https://github.com', label: 'GitHub' },
-  { icon: Linkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
-  { icon: Mail, href: 'mailto:contact@example.com', label: 'Email' },
+  { icon: Github, href: 'https://github.com/Djiento', label: 'GitHub' },
+  { icon: Linkedin, href: 'http://www.linkedin.com/in/djiento-abanga-307a98127', label: 'LinkedIn' },
+  { icon: Mail, href: 'mailto:abangadj@gmail.com', label: 'Email' },
 ];
 
 export default function Header() {
