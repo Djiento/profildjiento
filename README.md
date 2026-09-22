@@ -16,6 +16,14 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+## Formulaire de contact
+
+Le formulaire envoie les messages à `abangadj@gmail.com` via Resend.
+
+1. Créez une clé API dans [Resend](https://resend.com/api-keys).
+2. Copiez `.env.example` vers `.env.local` et renseignez `RESEND_API_KEY`.
+3. Pour la production, vérifiez votre domaine dans Resend puis remplacez `RESEND_FROM_EMAIL` par une adresse de ce domaine.
+
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
